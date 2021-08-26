@@ -36,13 +36,13 @@ function App() {
           />
         </div>
 
-        <Link to="/" className="link">
+        <Link to="/beranda" className="link">
           <div className="navigation">
             <FontAwesomeIcon icon={faHome} />
             <p>Beranda</p>
           </div>
         </Link>
-        <Link to="/personnel-list" className="link">
+        <Link to="/" className="link">
           <div className="navigation">
             <FontAwesomeIcon icon={faUsers} />
             <p>Personnel List</p>
@@ -58,13 +58,13 @@ function App() {
       
       <div className="right-container">
         <Switch>
-          <Route path="/personnel-list">
+          <Route path="/" exact>
             <PersonnelList onCliCkBtn={openBar} />
           </Route>
-          <Route path="/" exact>
+          <Route path="/beranda" exact>
             <Beranda onCliCkBtn={openBar} />
           </Route>
-          <Route path="/daily-attendance">
+          <Route path="/daily-attendance" exact>
             <DailyAttendance onCliCkBtn={openBar} />
           </Route>
         </Switch>

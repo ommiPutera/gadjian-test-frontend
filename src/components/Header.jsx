@@ -16,7 +16,6 @@ const Header = (props) => {
         />
         <img src={Logo} alt="logo" className="logo-header" />
       </div>
-
       <div className="header-right">
         <p>
           Hallo, <span className="user-name">Gadjian User</span>

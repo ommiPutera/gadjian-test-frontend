@@ -11,15 +11,27 @@
 }
 .bars-icon {
   display: none;
+  cursor: pointer;
 }
 .logo-header {
   display: none;
 }
-.header-right {
-  height: 100%;
+.header-container div {
+  height: 60px;
+  width: max-content;
   display: flex;
   align-items: center;
-  margin-right: 30px;
+}
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+  align-items: center;
 }
 .header-container p {
   font-size: 19px;
@@ -41,7 +53,6 @@
     justify-content: space-between;
   }
   .bars-icon {
-    margin-top: 10px;
     display: block;
     font-size: 20px;
   }
@@ -50,43 +61,31 @@
   }
   .header-left {
     display: flex;
-    align-items: center !important;
   }
   .logo-header {
     display: block;
     width: 80px;
-    margin-top: 10px;
     margin-left: 20px;
     height: auto;
     border-radius: 0px !important;
   }
   .header-right {
     margin: 0;
-    margin-top: 10px;
     display: flex;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .header-container {
-    top: 0;
-    margin: auto;
-    position: sticky;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-  }
   .logo-header {
     width: 120px;
     margin-left: 40px;
   }
   .bars-icon {
-    margin-left: 100px;
     font-size: 26px;
   }
-  .header-right {
-    margin-right: 100px;
+  .header-container div {
+    height: 60px;
+    display: flex;
   }
   .header-right p {
     font-size: 25px;
@@ -100,21 +99,31 @@
 @media only screen and (max-width: 600px) {
   .header-container {
     height: auto;
-    justify-content: space-between;
+    width: auto;
+  }
+  .header-container div {
+    height: 60px;
+    display: flex;
+  }
+  .header-left {
+    margin-left: 30px;
+  }
+  .header-right {
+    margin-right: 30px;
+    padding-right: 0;
   }
   .logo-header {
-    width: 80px;
+    width: 90px;
     margin-left: 30px;
   }
   .bars-icon {
-    margin-left: 100px;
     font-size: 20px;
   }
   .header-right p {
     font-size: 20px;
   }
   .header-right img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
   }
 }
