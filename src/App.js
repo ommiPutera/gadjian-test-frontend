@@ -67,6 +67,9 @@ function App() {
           <Route path="/daily-attendance" exact>
             <DailyAttendance onCliCkBtn={openBar} />
           </Route>
+          <Route path="*" >
+            <PersonnelList onCliCkBtn={openBar} />
+          </Route>
         </Switch>
       </div>
     </div>
