@@ -103,17 +103,15 @@
     width: 300px;
     height: 100%;
   }
-  .right-container {
-    width: auto;
-  }
-
-
   .left-container.open {
     display: block;
     z-index: 99;
   }
   .left-container.close {
     display: none;
+  }
+  .right-container {
+    width: auto;
   }
 
   .logo {
@@ -164,7 +162,7 @@
 
   .navigation {
     font-size: 18px;
-    margin: 20px 0;
+    margin: 40px 0;
   }
   .navigation p {
     margin-left: 10px;

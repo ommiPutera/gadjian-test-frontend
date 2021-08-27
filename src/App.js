@@ -25,7 +25,6 @@ function App() {
 
   return (
     <div className="app-container">
-
       <div className={`left-container ${open ? "open" : "close"}`}>
         <div className="close-and-logo-div">
           <img src={Logo} alt="logo" className="logo" />
@@ -35,27 +34,25 @@ function App() {
             onClick={closeBar}
           />
         </div>
-
         <Link to="/beranda" className="link">
-          <div className="navigation">
+          <div className="navigation" onClick={closeBar}>
             <FontAwesomeIcon icon={faHome} />
             <p>Beranda</p>
           </div>
         </Link>
         <Link to="/" className="link">
-          <div className="navigation">
+          <div className="navigation" onClick={closeBar}>
             <FontAwesomeIcon icon={faUsers} />
             <p>Personnel List</p>
           </div>
         </Link>
         <Link to="/daily-attendance" className="link">
-          <div className="navigation calendar">
+          <div className="navigation calendar" onClick={closeBar}>
             <FontAwesomeIcon icon={faCalendarAlt} />
             <p>Daily Attendance</p>
           </div>
         </Link>
       </div>
-      
       <div className="right-container">
         <Switch>
           <Route path="/" exact>
@@ -67,7 +64,7 @@ function App() {
           <Route path="/daily-attendance" exact>
             <DailyAttendance onCliCkBtn={openBar} />
           </Route>
-          <Route path="*" >
+          <Route path="*">
             <PersonnelList onCliCkBtn={openBar} />
           </Route>
         </Switch>

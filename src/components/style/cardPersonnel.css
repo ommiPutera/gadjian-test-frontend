@@ -34,7 +34,7 @@
   margin-right: 12px;
 }
 .card-personnel-container.loading {
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(230, 230, 230);
 }
 
 .fade-next {
@@ -137,9 +137,12 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .card-personnel-container.loading {
+    width: auto;
+    height: 210px;
+  }
   .card-personnel-container {
     width: auto;
-    height: fit-content;
     height: fit-content;
     margin-bottom: 25px;
   }
@@ -153,12 +156,26 @@
     height: 150px;
     margin: 0 20px 0 35px;
   }
+  .pic-card-loading {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+  }
   .text-5 {
     margin: 7px 0;
     font-size: 17px;
   }
   .text-4 {
     font-size: 17px;
+  }
+  .text-4.loading {
+    display: none;
+  }
+  .text-5.loading {
+    width: 150px;
+    height: 20px;
+    background-color: #eee;
   }
   .text-3 {
     font-size: 17px;
